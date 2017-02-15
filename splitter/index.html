@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splitter App</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Splitter</h1>
+  <p>There are <span class="black"><span id="balanceSplitter"></span> ethers in the Splitter contract</span></p>
+  <p>There are <span class="black"><span id="balanceAlice"></span> ethers in Alice's account</span></p>
+  <p>There are <span class="black"><span id="balanceBob"></span> ethers in Bob's account</span></p>
+  <p>There are <span class="black"><span id="balanceCarol"></span> ethers in Carol's account</span></p>
+
+  <span id="status" class="highlight"></span>
+
+  <br>
+  <p>Send From Alice (will be sent 50/50 to Bob and Carol)</p>
+  <label for="amount">Ether:</label><input type="text" id="amountAlice" placeholder="e.g., 1"></input> <button id="send" onclick="sendEther('Alice')">Send Ether</button>
+  <br>
+
+  <p>Send From Bob</p>
+  <label for="amount">Ether:</label><input type="text" id="amountBob" placeholder="e.g., 1"></input> <button id="send" onclick="sendEther('Bob')">Send Ether</button>
+  <br>
+
+  <p>Send From Carol</p>
+  <label for="amount">Ether:</label><input type="text" id="amountCarol" placeholder="e.g., 1"></input> <button id="send" onclick="sendEther('Carol')">Send Ether</button>
+  <br>
+</body>
+</html>
