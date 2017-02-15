@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remittance App</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Remittance</h1>
+  <p>There are <span class="black"><span id="balanceRemittance"></span> ethers in the Remittance contract</span></p>
+  <p>There are <span class="black"><span id="balanceAlice"></span> ethers in Alice's account</span></p>
+  <p>There are <span class="black"><span id="balanceBob"></span> ethers in Bob's account</span></p>
+  <p>There are <span class="black"><span id="balanceCarol"></span> ethers in Carol's account</span></p>
+  <p>The payer address is set to <span class="black"><span id="showPayer"></span></span> <button onclick="getPayer()">Get Payer</button></p>
+  <p>The payee address is set to <span class="black"><span id="showPayee"></span></span> <button onclick="getPayee()">Get Payee</button></p>
+  <p>Challenge 1 is set to <span class="black"><span id="showChallenge1"></span></span> <button onclick="getChallenge1()">Get Challenge 1</button></p>
+  <p>Challenge 2 is set to <span class="black"><span id="showChallenge2"></span></span> <button onclick="getChallenge2()">Get Challenge 2</button></p>
+
+  <span id="status" class="highlight"></span><br><br>
+
+  <table>
+    <tr>
+      <td colspan="2"><strong>Remittance Controller</strong></td>
+    </tr>
+    <tr>
+      <td>Set Payer Address:</td>
+      <td>
+        <select id="payerAddress"></select>
+        <button onclick="setPayer()">Set Payer</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>Remittance Payer</strong></td>
+    </tr>
+    <tr>
+      <td>Set Payee Address:</td>
+      <td>
+        <select id="payeeAddress"></select>
+        <button onclick="setPayee()">Set Payee</button>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">Set Challenges:</td>
+      <td>
+        <input type="text" id="challenge1" /><br>
+        <input type="text" id="challenge2" /> 
+        <button onclick="setChallenges()">Set Challenges</button><br>
+      </td>
+    </tr>
+    <tr>
+      <td>Set Remittance Amount:</td>
+      <td>
+        <input type="text" id="amount" /> 
+        <button onclick="fundContract()">Set Remittance</button><br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>Remittance Receiver</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">Claim Remittance:</td>
+      <td>
+        <input type="text" id="payeeChallenge1" /><br>
+        <input type="text" id="payeeChallenge2" /> 
+        <button onclick="retrieveFunds()">Claim Remittance</button><br>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
